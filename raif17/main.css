@@ -115,6 +115,10 @@ a:hover {
 	list-style: none;
 }
 
+.suppliers li {
+	list-style: none;
+}
+
 .unused {
 	text-decoration: line-through;
 }
