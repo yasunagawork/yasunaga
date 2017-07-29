@@ -1,115 +1,122 @@
 body {
-	font-family: 'Trebuchet', sans-serif;
+	font-family: 'Gudea', sans-serif;
 	font-weight:300;
 	font-size: 1em;
-	color: #222;
+	color: #000;
 	background: #fff;
 	margin: 0;
 	height: 100%;
-	line-height: 1.4em;
+	line-height: 1.65em;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+
 #container {
-	max-width: 1330px;
+	width: 990px;
 	margin: 0 auto;
-	padding:20px;
 	height: 100%;
-	clear:both;
-  	text-align: center;
 }
 
 #header {
-	max-width:1290px;
+	width:940px;
 	margin:40px 0;
-	text-align: left;
 }
 
-#header ul li{
-	list-style: none;
-}
-
-#contentheader {
-	width:850px;
-	margin:40px 0;
-	text-align: left;
-}
-
-#contentheader ul li{
-	list-style: none;
-}
-
-.subheader {
-	background-color:#005a55;
-	padding: 25px 20px;
-	color: #fff;
-}
-
-#mainL {
-	max-width: 660px;
-	margin-right: 10px;
-	text-align: left;
-  	display: inline-block;
-} 
-
-#mainR {
-	max-width: 660px;
-	margin-right: 10px;
-	text-align: left;
-  	display: inline-block;
-} 
-
-.content{
-	text-align: justify;
-	width: 850px;
-	display: inline-block;
-}
-
-.content ul, .content ol {
-	margin-left: 20px;
-}
-
-.content #header ul, .content #header ol, #contentheader ul, #contentheader ol  {
+#sidebar {
+	width: 150px;
 	margin-left: 0px;
+	float: left;
+
 }
 
-h1{
-	font-family: 'FUTURA', 'Trebuchet', sans-serif;
-	font-size: 1.3em;
-	color: #000000;
-	font-weight: normal;
+#main {
+	width: 740px;
+	float:left;
+	padding-left:40px;
+	 border-left: 1px solid gray;
+	
+} 
+
+.content {
+	padding:0 15px 15px;
 }
 
-h2{
-	font-family: 'FUTURA', 'Trebuchet', sans-serif;
-	font-size: 1em;
-	color: #000000;
-	font-weight: normal;
-	margin-top:35px;
+h1, h2, h3, h4, .big, .medium {
+	font-family: 'Gudea', sans-serif;
+	font-weight: 900;
+	color: #000;
+}
+
+
+h4 {
+	margin-top: 30px;
 }
 
 .big {
-	font-size: 1.4em;
+	font-size: 3em;
+	text-align: center;
+	line-height: 1em;
 }
 
-ul, ol, li {
+.medium {
+	font-size: 1.25em;
+	text-align: center;
+	line-height: 1em;
+	margin:0 0 60px 0;
+}
+
+ul, li {
 	margin-left: 0;
 	padding-left: 0;
 }
 
+#sidebar li {
+	list-style: none;
+	line-height:2em;
+}
+
+.content li, .homework ul li {
+	margin-left:20px;
+	list-style-type:square;
+	padding-bottom:5px;
+}
+
 a {
 	color: #000;
+	
 }
 
 a:hover {
 	text-decoration: none;
 }
 
-#mainL a, #mainR a, #header h1 a, #contentheader a {
-	text-decoration: none;
+.homework_container {
+	float:left;
+	margin-bottom:30px;
 }
 
-#header a:hover, #contentheader a:hover{
-	text-decoration: underline;
+.homework {
+	background: #eee;
+	padding:15px;
+	border: 1px dashed #aaa;
+	margin-bottom:10px;
+	float:left;
+	width: 710px;
+}
+
+.homework h3 {
+	margin: 0;
+}
+
+.homework li {
+	list-style: none;
+}
+
+.unused {
+	text-decoration: line-through;
 }
 
 #footer {
@@ -117,54 +124,43 @@ a:hover {
 	height: 60px;
 }
 
-.calendar, .calendarActive, .calendarMandatory, .calendarP1Mandatory, .calendarP2Mandatory, .calendarP1, .calendarP2 {
-	width: 595px;
-	background-color:#333;
-	margin-bottom:10px;
-	padding: 25px 20px;
+.subtitle{
+	margin:0 0 30px 0;
+	padding:0;
+	
+}
+
+blockquote {
 	color: #fff;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 800;
+	font-size: 1.25em;	
+	line-height: 1.5em;
+	padding:25px;
+	margin:20px 0 30px 0;
+	background: #000;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 }
 
-.calendarActive{
-	background-color:#0e5599;
-	color: #fff;
+blockquote cite{
+	color: #eee;
+	display: block;
+	margin-top: 5px;
+	font-family: 'Nunito', sans-serif;
+	font-weight:300;
+	font-size: .8em;	
 }
 
-.calendarMandatory{
-	background-color:#dd0035;
-	color: #fff;
+blockquote cite a {
+	color: #eee;
+}
+ 
+blockquote cite:before {
+	content: "\2014 \2009";
 }
 
-.calendarP1Mandatory{
-	background-color:#e4d200;
-	color:#000;
-}
-
-.calendarP2Mandatory{
-	background-color:#cc09b1;
-	color:#fff;
-}
-
-
-.calendarActive:hover{
-	background-color: #0e66aa;
-}
-
-.calendarP1{
-	background-color:#e3e06d;
-}
-
-.calendarP2{
-	background-color:#ef9ce8;
-}
-
-.caption{
-	margin:0 0 20px 0;
-}
-
-blockquote{
-	font-size: 1em;
-	line-height: 1.25em;
+img {
 	margin:0;
-	padding-bottom: 10px;
 }
+
