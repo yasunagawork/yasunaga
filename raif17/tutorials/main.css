@@ -33,12 +33,13 @@ body {
 }
 
 #main {
-	width: 740px;
+	width: 700px;
 	float:left;
 	padding-left:40px;
 	 border-left: 1px solid gray;
 	
 } 
+
 
 .content {
 	padding:0 15px 15px;
@@ -81,6 +82,10 @@ ul, li {
 	line-height:2em;
 }
 
+#home a {
+	text-decoration: none;
+}
+
 .content li, .homework ul li {
 	margin-left:20px;
 	list-style-type:square;
@@ -91,6 +96,9 @@ a {
 	color: #000;
 	
 }
+
+	
+
 
 a:hover {
 	text-decoration: none;

@@ -79,7 +79,10 @@ ul, li {
 #sidebar li {
 	list-style: none;
 	line-height:2em;
+
 }
+
+
 
 .content li, .homework ul li {
 	margin-left:20px;
