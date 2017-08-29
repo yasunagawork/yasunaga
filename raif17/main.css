@@ -16,6 +16,16 @@ body {
 	height: 100%;
 	clear:both;
   	text-align: center;
+  	}
+
+
+
+#imagee {
+	
+	width: 700px;
+	height: 150px;
+	overflow: scroll;
+  	
 }
 
 #header {
