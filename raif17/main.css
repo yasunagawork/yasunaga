@@ -143,13 +143,22 @@ a {
 	color: #000;
 }
 
+a:active{
+	 color: blue;
+}
+
 a:hover {
 	text-decoration: none;
+	color:hotpink
 }
 
 #mainL a, #mainR a, #header h1 a, #contentheader a {
 	text-decoration: none;
+
 }
+
+
+
 
 #header a:hover, #contentheader a:hover{
 	text-decoration: underline;
