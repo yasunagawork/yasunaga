@@ -88,17 +88,21 @@ body {
 }
 
 .content_homework ul, .content_homework ol{
-	margin-left: 30px;
-	margin-right: 30px;
+	margin-left: 40px;
+	margin-right: 40px;
 
 }
 
-.content_homework h1, .content_homework h2, .content_homework p {
+.content_homework h1, .content_homework h2, .content_homework p, .content_homework img{
 	margin-left: 20px;
 	margin-right: 20px;
-
+	
+	
 }
 
+.content_homework mark {
+background-color: orange;
+}
 
 
 .content #header ul, .content #header ol, #contentheader ul, #contentheader ol  {
