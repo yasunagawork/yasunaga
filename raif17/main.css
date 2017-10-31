@@ -93,7 +93,7 @@ body {
 
 }
 
-.content_homework h1, .content_homework h2, .content_homework p, .content_homework img{
+.content_homework h1, .content_homework h2, .content_homework h3, .content_homework p, .content_homework img{
 	margin-left: 20px;
 	margin-right: 20px;
 	
@@ -132,6 +132,14 @@ h3{
 	color: #000000;
 	font-weight: normal;
 	margin-top:35px;
+}
+
+h4{
+	font-family: 'Gudea',sans-serif;
+	font-size: 0.8em;
+	color: gray;
+	font-weight: normal;
+	
 }
 
 .big {
