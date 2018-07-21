@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>oogle</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="icon" href="images/electronics.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myNavbar");
+      if (x.className === "navbar") {
+        x.className += " responsive";
+      } else {
+        x.className = "navbar";
+      }
+    }
+  </script> 
+
+
+  <div class="navbar" id="myNavbar">
+    <a href="index.html" class="active">yasunaga.work</a>
+    <a href="index.html#works">works</a>
+    <a href="index.html#resouces">resources</a>
+    <a href="index.html#contacts">contacts</a>
+    <a href="index.html#about">what about</a>
+
+    <a href="javascript:void(0);" style="font-size:10px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </div> 
+
+
+
+
+  <div class="bg">
+    <div id = "container">
+       <div id= "header2">
+        <h4> <a href="index.html">yasunaga.work</a></h4>
+       </div>
+
+      <div id="header">
+        <h1> <a href="oogle.html">Oogle</a></h1>
+      </div>
+
+
+      <div class="videoWrapper">
+           <p>
+            <iframe src="https://player.vimeo.com/video/248338875" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></p></div>
+
+       <p>Oogle is an improvisational visual musical project for explorative word creation and image association. Oogle uses speech synthesis to experimentally pronounce words to observe musical nature of spoken words of computers, while it performs Google Image search and provides an array of associated images with this newly discovered words. 
+       </p>
+
+      
+
+
+
+     
+    </div>
+
+    <div id="footer"></div>
+  </div>
+</body>
+</html>
