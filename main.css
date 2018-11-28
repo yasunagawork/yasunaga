@@ -189,6 +189,7 @@ img {
   position: fixed;
   bottom: 0;
   width: 100%;
+  z-index: 9999;
 }
 
 .navbar a {
@@ -199,12 +200,14 @@ img {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  z-index: 9999;
 }
 
 .navbar a:hover {
   background-color: #edddc9;
   color: #222;
   border-radius: 10px;
+  z-index: 9999;
 }
 
 .navbar a.active {
