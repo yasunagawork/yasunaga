@@ -2,8 +2,8 @@ body{
 	font-family: 'Gudea', sans-serif;
 	font-weight:200;
 	font-size: 1em;
-	color: #222;
-	background: #cccccc;
+	color: white;
+	background: #00464c;
 	margin: 0;
 	height: 100%;
 	line-height: 1.4em;
@@ -161,7 +161,7 @@ img {
 
 .navbar {
   overflow: hidden;
-  background-color: #cccccc;  
+  background-color: #00464c;  
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -171,7 +171,7 @@ img {
 .navbar a {
   float: left;
   display: block;
-  color: #222;
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -180,15 +180,15 @@ img {
 }
 
 .navbar a:hover {
-  background-color: #edddc9;
-  color: #222;
+  background-color: #00464c;
+  color:white;
   border-radius: 10px;
   z-index: 9999;
 }
 
 .navbar a.active {
   background-color:  #edddc9;
-  color: #222;
+  color: white;
   border-radius: 10px;
 }
 
@@ -236,7 +236,7 @@ img {
 	height:auto;
 	text-align: left;
 	line-height: 1.7em;
-	background-color: #ffffff;
+	background-color: white;
 }
 
 #header ul li{
@@ -256,7 +256,7 @@ img {
 .subheader {
 	background-color:#005a55;
 	padding: 25px 20px;
-	color: #fff;
+	color: white;
 }
 
 
@@ -287,7 +287,7 @@ img {
 h1{
 	font-family: 'Gudea',sans-serif;
 	font-weight:400;
-	color: #000000;
+	color: white;
 	font-size:1.6em;
 	margin-top:35px;
 	
@@ -296,14 +296,14 @@ h1{
 h2{
 	font-family: 'Gudea',sans-serif;
 	font-size: 1.4em;
-	color: #000000;
+	color: white;
 	font-weight: normal;
 	margin-top:35px;
 }
 h3{
 	font-family: 'Gudea',sans-serif;
 	font-size: 1em;
-	color: #000000;
+	color: white;
 	font-weight: normal;
 	margin-top:35px;
 }
@@ -311,7 +311,7 @@ h3{
 h4{
 	font-family: 'Gudea',sans-serif;
 	font-size: 0.8em;
-	color: gray;
+	color: white;
 	font-weight: normal;
 	
 }
@@ -326,7 +326,7 @@ ul, ol, li {
 }
 
 a {
-	color: #000;
+	color: white;
 }
 
 a:active{
