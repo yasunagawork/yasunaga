@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Cosmic Engagement Ring</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="icon" href="images/electronics.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type = "text/Javascript" src="js/three.js"></script>
+  <script type = "text/Javascript" src="js/STLLoader.js"></script>
+  <script type = "text/Javascript" src="js/Detector.js"></script>
+
+<script>
+function imageZoom(imgID, resultID) {
+  var img, lens, result, cx, cy;
+  img = document.getElementById(imgID);
+  result = document.getElementById(resultID);
+  /*create lens:*/
+  lens = document.createElement("DIV");
+  lens.setAttribute("class", "img-zoom-lens");
+  /*insert lens:*/
+  img.parentElement.insertBefore(lens, img);
+  /*calculate the ratio between result DIV and lens:*/
+  cx = result.offsetWidth / lens.offsetWidth;
+  cy = result.offsetHeight / lens.offsetHeight;
+  /*set background properties for the result DIV:*/
+  result.style.backgroundImage = "url('" + img.src + "')";
+  result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
+  /*execute a function when someone moves the cursor over the image, or the lens:*/
+  lens.addEventListener("mousemove", moveLens);
+  img.addEventListener("mousemove", moveLens);
+  /*and also for touch screens:*/
+  lens.addEventListener("touchmove", moveLens);
+  img.addEventListener("touchmove", moveLens);
+  function moveLens(e) {
+    var pos, x, y;
+    /*prevent any other actions that may occur when moving over the image:*/
+    e.preventDefault();
+    /*get the cursor's x and y positions:*/
+    pos = getCursorPos(e);
+    /*calculate the position of the lens:*/
+    x = pos.x - (lens.offsetWidth / 2);
+    y = pos.y - (lens.offsetHeight / 2);
+    /*prevent the lens from being positioned outside the image:*/
+    if (x > img.width - lens.offsetWidth) {x = img.width - lens.offsetWidth;}
+    if (x < 0) {x = 0;}
+    if (y > img.height - lens.offsetHeight) {y = img.height - lens.offsetHeight;}
+    if (y < 0) {y = 0;}
+    /*set the position of the lens:*/
+    lens.style.left = x + "px";
+    lens.style.top = y + "px";
+    /*display what the lens "sees":*/
+    result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
+  }
+  function getCursorPos(e) {
+    var a, x = 0, y = 0;
+    e = e || window.event;
+    /*get the x and y positions of the image:*/
+    a = img.getBoundingClientRect();
+    /*calculate the cursor's x and y coordinates, relative to the image:*/
+    x = e.pageX - a.left;
+    y = e.pageY - a.top;
+    /*consider any page scrolling:*/
+    x = x - window.pageXOffset;
+    y = y - window.pageYOffset;
+    return {x : x, y : y};
+  }
+}
+</script>
+
+
+
+
+</head>
+
+<body>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myNavbar");
+      if (x.className === "navbar") {
+        x.className += " responsive";
+      } else {
+        x.className = "navbar";
+      }
+    }
+  </script> 
+
+
+  <div class="navbar" id="myNavbar">
+    <a href="index.html" class="active">yasunaga.work</a>
+    <a href="index.html#works">works</a>
+    <!-- <a href="index.html#resouces">resources</a> -->
+    <a href="index.html#contacts">contacts</a>
+    <a href="index.html#about">what about</a>
+    <a href="cv.html">CV</a>
+
+    <a href="javascript:void(0);" style="font-size:10px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </div> 
+
+
+
+  <div id="myresult" class="img-zoom-result"></div> 
+
+
+
+ 
+    <div id = "container">
+       <div id= "header2">
+        <h4> <a href="index.html">yasunaga.work</a></h4>
+       </div>
+
+      <div id="header">
+        <h1> <a href="ring.html">Cosmic Engagement Ring</a></h1>
+      </div>
+      <br>
+
+    <div id = "WebGL-output"> </div> 
+
+    <script src="js/three.js"></script>
+    <script src="js/STLLoader.js"></script>
+    <script src="js/Detector.js"></script>
+
+    <script>
+
+      var scene = new THREE.Scene({ antialias: true });
+      scene.background = new THREE.Color( '#cccccc' );
+      //scene.fog = new THREE.Fog( 0x72645b, 2, 15 );
+
+      var camera = new THREE.PerspectiveCamera( 75, 1, 0.1, 100);
+      camera.position.set( 0, 3, -30);
+      cameraTarget = new THREE.Vector3( 0, 1.5, 0 );
+
+      var renderer = new THREE.WebGLRenderer();
+      //renderer.setPixelRatio( window.devicePixelRatio );
+      renderer.setSize( 400,400 );
+      renderer.gammaInput = true;
+      renderer.gammaOutput = true;
+      renderer.shadowMap.enabled = true;
+
+      contenedor = document.getElementById('WebGL-output');
+
+      contenedor.appendChild(renderer.domElement);
+
+
+      var loader = new THREE.STLLoader();
+      var scalemesh = 0.09;
+      
+
+      // load a resource
+      loader.load('models/ringbase.stl',function ( geometry ) {
+        var material = new THREE.MeshPhongMaterial( { color: '#cccccc', specular: 0x111111, shininess: 100 } );
+          var mesha = new THREE.Mesh( geometry, material );
+          mesha.position.set( 0, -0.5, 0 );
+          mesha.rotation.set( -Math.PI / 2, 0, 0 );
+          mesha.scale.set( scalemesh, scalemesh, scalemesh );
+          mesha.castShadow = true;
+          mesha.receiveShadow = true;
+          scene.add( mesha );
+        } );
+
+      loader.load('models/top.stl',function ( geometry ) {
+        var material = new THREE.MeshPhongMaterial( { color: '#cccccc', specular: 0x111111, shininess: 100 } );
+          var mesh = new THREE.Mesh( geometry, material );
+          mesh.position.set( 0, -1, 0 );
+          mesh.rotation.set( -Math.PI / 2, 0, 0 );
+          mesh.scale.set( scalemesh, scalemesh, scalemesh );
+          mesh.castShadow = true;
+          mesh.receiveShadow = true;
+          scene.add( mesh );
+        } );
+
+      
+
+      //var plane = new THREE.Mesh(
+         // new THREE.PlaneBufferGeometry( 100, 100 ),
+         // new THREE.MeshPhongMaterial( { color: '#cccccc', specular: '#cccccc' } )
+        //);
+        //plane.rotation.x = -Math.PI/2;
+       // plane.position.y = -4;
+       // scene.add( plane );
+       // plane.receiveShadow = true;
+
+        scene.add( new THREE.HemisphereLight( 0x443333, 0x111122 ) );
+        addShadowedLight( 1, 1, 1, 0xffffff, 1.35 );
+        //addShadowedLight( 0.5, 1, -1, 0xffaa00, 1 );
+
+      
+       // function onWindowResize() {
+        
+       // camera.aspect = window.innerWidth/ window.innerHeight;
+
+        //camera.updateProjectionMatrix();
+       // renderer.setSize( window.innerWidth, window.innerHeight );
+
+     // }
+
+      function addShadowedLight( x, y, z, color, intensity ) {
+        var directionalLight = new THREE.DirectionalLight( color, intensity );
+        directionalLight.position.set( x, y, z );
+        scene.add( directionalLight );
+        directionalLight.castShadow = true;
+        var d = 1;
+        directionalLight.shadow.camera.left = -d;
+        directionalLight.shadow.camera.right = d;
+        directionalLight.shadow.camera.top = d;
+        directionalLight.shadow.camera.bottom = -d;
+        directionalLight.shadow.camera.near = 1;
+        directionalLight.shadow.camera.far = 4;
+        directionalLight.shadow.mapSize.width = 1024;
+        directionalLight.shadow.mapSize.height = 1024;
+        directionalLight.shadow.bias = -0.002;
+      }
+
+      var animate = function () {
+        
+        requestAnimationFrame( animate );
+
+        var timer = Date.now() * 0.0005;
+        camera.position.x = Math.cos( timer ) * 5;
+        camera.position.z = Math.sin( timer ) * 5;
+        camera.lookAt( cameraTarget );
+
+        renderer.render(scene, camera);
+      };
+
+      animate();
+
+
+    </script>
+
+
+
+    <div class = "content"> <p> &nbsp &nbsp This is an engagement ring with a compartment for storing the perfect size crumb. When you find a piece of something that fits nicely into the shape of the compartment, you store that crumb and become engaged to the crumb. Your body is tied to the journey and history of that crumb as a partner for your thoughts. The ring celebrates the miracle and mystery of two things that meet in chance, ones we know about and ones we never know. <br> <br>
+
+
+        &nbsp &nbsp This engagement ring acts as an anchor and tuning device for us to engage the small but infinitely vast field of crumbs that we do not pay attention every day. Crumbs often come from something larger at an unknown place and time. This engagement signifies our larger and obscure connections to the universe imagined through a small piece of its parts.
+       </p>
+
+     </div>
+     
+
+    <div class="img-zoom-container">
+      <img id="myimage" src="images/ring/06.jpg" style="width:100%" class = "center">
+      
+    </div>
+
+    
+
+
+       
+
+
+       <img src="images/ring/08.jpg">
+
+     
+
+
+    <script>imageZoom("myimage", "myresult");</script>
+    
+
+    </div>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+
+    <script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        document.getElementById("myBtn").style.display = "block";
+      } else {
+        document.getElementById("myBtn").style.display = "none";
+      }
+     }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    }
+    </script>
+
+  
+
+    <div id="footer"></div>
+  </div>
+
+</body>
+</html>

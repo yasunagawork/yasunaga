@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Robotic Arts Intro 2019</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="icon" href="images/electronics.png">
+</head>
+<body>
+  <div id="container">
+    <div class="content">
+      <div id="contentheader">
+        <h1><a href="index.html">Robotic Arts Intro Fall 2019 (IA277.01)</a></h1>
+          <ul>
+          <li>Instructor: Lucas Yasunaga Haroldsen (<a href="mailto:lharoldsen@mica.edu">lharoldsen@mica.edu</a>)</li>
+          <li>Class Site: <a href="http://yasunaga.work/raif18/index.html">yasunaga.work/raif19</a></li>
+          <li>syllabus: <a href="docs/syllabus.pdf">syllabus.pdf</a></li>
+          <li>Resources: <a href="links.html">links.html</a></li>
+          <li>Office hours: Tuesday 1 - 4pm </li>
+        </ul>
+
+      </div>
+
+      <br>
+      <h1><mark>10/25: Expression --- [Analog output]</mark> </h1> <br>
+      <p><img src="images/pwm.gif" width = "400px"></p><br>
+
+
+
+ 
+      <h3>Review</h3>
+      <p>
+
+      <ol>
+        <li><a href="https://www.youtube.com/watch?v=CPMQSXrsaO8">Analog input and serial monitor </a></li>
+        <li><a href="https://learn.adafruit.com/experimenters-guide-for-metro/using-the-arduino-serial-plotter">Serial Plotter</a></li>
+        <li>Variable resistors and thresholds</li>
+        <li><a href="https://www.youtube.com/watch?v=QNTaQ5qjniE">variables</a></li>
+        <li><a href="https://www.arduino.cc/en/Reference/If">if statement and comparison operators</a></li>
+      </ol>
+      <p>
+      <br>
+
+      
+
+      <p>
+      <h3>Today, we will explore:</h3>
+      <ol>
+
+       <li><a href="https://youtu.be/wpTqiEcHwwQ">Analog output</a> </li>
+        <li>Fading LED</li>
+        <li><a href="https://www.youtube.com/watch?v=jiu9zL10lIc">Piezo element</a></li>
+        <li>Controlling the speed of a small motor</li>
+        <li><a href="https://www.arduino.cc/en/Reference/Tone">tone()</a> function and pitches.h   --><a href="https://learn.adafruit.com/adafruit-arduino-lesson-10-making-sounds/playing-a-scale">melody</li>
+        <li><a href="https://www.arduino.cc/en/Reference/Map">Map function</li>
+          <li><a href="https://www.arduino.cc/en/Reference/Random">random function</a></li>
+          <li>Servo motor</li>
+          
+      </ol>
+
+       
+       <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTtHt6UdhuRKIFrIU3TmRnAqKueHaHorGmgOSYy52niczMOcY9VwG_uaVl__beLUf00HME8yZxhyAk7/embed?start=false&loop=false&delayms=3000" frameborder="0" width="600" height="470" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+
+
+       <h3>Today's Code</h3>
+       
+       <p>
+
+      <ul>
+        <li><a href="https://github.com/lucasharoldsen/raif18/tree/master/AnalogOut">Analog output</a></li>
+        
+
+        
+      </ul>
+      
+      <br>
+
+       <h3>Tools</h3>
+       
+       <p>
+
+      <ul>
+        <li><a href="http://www.hobby-hour.com/electronics/resistorcalculator.php">Resistor color code calculator</a></li>
+        <li><a href="http://www.hobby-hour.com/electronics/ledcalc.php">LED Series Resistor Calculator</a></li>
+        <li><a href="http://www.rapidtables.com/web/color/RGB_Color.htm">RGB color code chart</a></li>
+        <li><a href="http://www.javascripter.net/faq/hextorgb.htm">Hex to RGB Conversion</a></li>
+
+      
+      </ul>
+      
+      <br>
+
+      <h3> Fritzing </h3>
+
+      <p> <a href="https://fritzing.org/home/">Fritzing</a> is a electronic design software that can be use to document your work. It is friendly for arduino and related microcontroller projects.</p><br><br>
+
+       <p><a href="docs/fritzing.0.8.7b.cocoa.dmg">MAC</a></p><br>
+        <p><a href="docs/fritzing.0.8.7b.pc.zip">WIN</a></p><br>
+         <p><a href="docs/fritzing-0.8.7b.linux.i386.tar.bz2">Linux</a></p><br>
+
+
+
+
+
+
+      <h3> Announcements </h3>
+
+
+      <p><img src="images/imersive.png" width = "600px"></p><br>
+
+
+
+
+
+
+
+
+
+      <h3>Presentation</h3>
+
+
+      <p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/bcstc1ozczQ?rel=0" frameborder="0" allowfullscreen></iframe><br>
+        Persistence Of Vision<br>
+        <p>
+
+
+        <p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/_7_EtBWFHNg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>Jim Campbell</a> Running and Falling Series<br>
+        </p>
+
+        <p><iframe src="https://player.vimeo.com/video/162979922" width="640" height="360" frameborder="0" allowfullscreen></iframe><br>
+          <a href="https://www.random-international.com/">Study for Fifteen Points by Random International (Hannes Koch and Florian Ortkrass)</p>
+
+        
+    <p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/cAr77JNZ6O4?rel=0" frameborder="0" allowfullscreen></iframe><br>
+      Qoobo by <a href="">Yukai Engineeing</a>
+    </p>
+
+
+         <p>
+        <iframe src="https://player.vimeo.com/video/35636711" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><br>
+        <a href="http://recyclism.com/lsd.php">L.S.D Light to Sound Device (Paris)</a><br>
+        <a href="http://recyclism.com">Benjamin Gaulon</a><br>
+
+      </p>
+
+      <p><iframe width="560" height="315" src="https://www.youtube.com/embed/8EBF0qOKpns" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>  Ryota Kuwakubo</p> 
+
+      
+      <p>
+
+
+      <img src="images/Printershake2.png" width="400""><br><a href="http://quellebellevue.com/qbv/2011/07/18/printershake/
+      ">Printer Shake by Joe Winter</a><br>
+
+    </p>
+
+
+      
+
+
+
+
+
+
+      
+
+
+
+
+
+      
+
+
+
+      
+
+
+        
+      
+
+   
+
+    <div class="content_homework">
+      <h1>HOMEWORK</h1>
+
+
+      <h2>Analog output documentation</h2>
+
+      <p> Please submit your code (.ino file) and Fritzing drawing or photo/scan of hand drawn schismatics to google drive named "Analog out"</p>
+
+      <h2>  Start thinking about <a href="project.html"><mark>Final Project!</mark></a></h2>
+      
+      <p>Final Project is still quite ahead of us (due Dec 7th and 13th) but it will be here before we know it! Start thinking about what you are interested in spending time on. See the details on this link <a href="project.html">here</a>. Spend this couples of week experimenting with what you have learned so far in this class to think about possibilities for your project. Take some time to learn materials of your choice. 
+      </p>
+
+
+
+
+      
+      
+      
+      
+
+    </div>
+    </div>
+
+    <div id="footer"></div>
+  </div>
+</body>
+</html>

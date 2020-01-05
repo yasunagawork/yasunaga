@@ -1,0 +1,233 @@
+body {
+	font-family: 'Gudea', sans-serif;
+	font-weight:200;
+	font-size: 1em;
+	color: #222;
+	background: #cccccc;
+	margin: 0;
+	height: 100%;
+	line-height: 1.4em;
+}
+
+#container {
+	max-width: 1330px;
+	margin: 0 auto;
+	padding:20px;
+	height: 100%;
+	clear:both;
+  	text-align: center;
+  	}
+
+
+
+
+
+#imagee {
+	
+	width: 700px;
+	height: 150px;
+	overflow: scroll;
+  	
+}
+
+#header {
+	max-width:1290px;
+	margin:40px 0;
+	text-align: left;
+}
+
+#header ul li{
+	list-style: none;
+}
+
+#contentheader {
+	width:850px;
+	margin:40px 0;
+	text-align: left;
+}
+
+#contentheader ul li{
+	list-style: none;
+}
+
+.subheader {
+	background-color:#005a55;
+	padding: 25px 20px;
+	color: #fff;
+}
+
+#main {
+	max-width: 650px;
+	margin-right: 10px;
+	text-align: left;
+  	display: inline-block;
+} 
+
+
+
+.content{
+	text-align: justify;
+	width: 650px;
+	display: inline-block;
+
+}
+
+.content_homework{
+	text-align: justify;
+	width: 650px;
+	background: #ddd;
+	margin-bottom:10px;
+	display: inline-block;
+}
+
+.content ul, .content ol {
+	margin-left: 20px;
+}
+
+.content_homework ul, .content_homework ol{
+	margin-left: 40px;
+	margin-right: 40px;
+
+}
+
+.content_homework h1, .content_homework h2, .content_homework h3, .content_homework p, .content_homework img{
+	margin-left: 20px;
+	margin-right: 20px;
+	
+	
+}
+
+.content_homework mark {
+background-color: orange;
+}
+
+
+.content #header ul, .content #header ol, #contentheader ul, #contentheader ol  {
+	margin-left: 0px;
+}
+
+
+
+h1{
+	font-family: 'Gudea',sans-serif;
+	font-size: 1.3em;
+	font-weight:400;
+	color: #000000;
+	
+}
+
+h2{
+	font-family: 'Gudea',sans-serif;
+	font-size: 1.2em;
+	color: #000000;
+	font-weight: normal;
+	margin-top:35px;
+}
+h3{
+	font-family: 'Gudea',sans-serif;
+	font-size: 1em;
+	color: #000000;
+	font-weight: normal;
+	margin-top:35px;
+}
+
+h4{
+	font-family: 'Gudea',sans-serif;
+	font-size: 0.8em;
+	color: gray;
+	font-weight: normal;
+	
+}
+
+.big {
+	font-size: 1.4em;
+}
+
+ul, ol, li {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+a {
+	color: #000;
+}
+
+a:active{
+	 color: blue;
+}
+
+a:hover {
+	text-decoration: none;
+	
+}
+
+#main a, #header h1 a, #contentheader a {
+	text-decoration: none;
+
+}
+
+
+
+
+#header a:hover, #contentheader a:hover{
+	text-decoration: underline;
+}
+
+#footer {
+	clear: both;
+	height: 60px;
+}
+
+.calendar, .calendarActive, .calendarActiveArduino {
+	width: 595px;
+	background-color:#969064;
+	margin-bottom:10px;
+	padding: 25px 20px;
+	color: #1C2929;
+}
+
+.calendarActive{
+	background-color:#5bcc5d;
+	color: #1C2929;
+}
+
+.calendarActiveArduino{
+	background-color:#67c6c2;
+	color: #1C2929;
+}
+
+
+.calendarActive li{
+	margin-left:25px;
+}
+
+
+
+
+
+
+.calendarActive:hover{
+	background-color: #439944;
+}
+
+.calendarActiveArduino:hover{
+	background-color: #2f5957;
+}
+
+
+
+.caption{
+	margin:0 0 20px 0;
+}
+
+blockquote{
+	font-size: 1em;
+	line-height: 1.25em;
+	margin:0;
+	padding-bottom: 10px;
+}
+
+mark {
+
+	background-color: #5bcc5d;
+}
