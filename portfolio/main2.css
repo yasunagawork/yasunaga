@@ -41,6 +41,73 @@ body{
 	
 }
 
+#container2 {
+  
+  margin: 0 auto;
+  padding-left:2%;
+  
+  
+  
+  height: 100%;
+  max-width: 500px;
+  
+  
+    text-align: left;
+
+    
+  }
+
+
+* {box-sizing: border-box;}
+.img-zoom-container {
+  position: relative;
+}
+.img-zoom-lens {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  
+  width: 40px;
+  height: 40px;
+}
+.img-zoom-result {
+  border: 1px solid #d4d4d4;
+  
+ 
+  
+  
+  position: -webkit-sticky;
+  position: sticky;
+    top: 0;
+    
+    width: 150px;
+    height:150px;
+   
+
+    
+}
+
+
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.bg2 {
+ height: 100%;
+ margin: 0 auto;
+ max-width: 1000px;
+ clear:both;
+ text-align: left;
+
+
+ background-image: url(images/ring/back.jpg);
+ background-size: 100%;
+}
+
+
 
 .center {
     display: block;
