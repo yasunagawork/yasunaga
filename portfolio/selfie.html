@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>yasunaga.work</title>
+  <link rel="stylesheet" href="main2.css">
+  <link rel="icon" href="images/electronics.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+  
+
+
+  <div class="bg">
+    <div id = "container">
+       <div id= "header2">
+        <h4> <a href="index.html">yasunaga.work</a></h4>
+       </div>
+
+      <div id="header">
+        <h1> <a href="index.html">Capricio Selfie Pallete</a></h1>
+      </div>
+
+      <div id = "WebGL-output"> </div> 
+
+    <script src="js/three.js"></script>
+    <script src="js/STLLoader.js"></script>
+    <script src="js/Detector.js"></script>
+
+    <script>
+
+      var scene = new THREE.Scene({ antialias: true });
+      scene.background = new THREE.Color( '#cccccc' );
+      //scene.fog = new THREE.Fog( 0x72645b, 2, 15 );
+
+      var camera = new THREE.PerspectiveCamera( 75, 1, 0.1, 100);
+      camera.position.set( 0, 3, -30);
+      cameraTarget = new THREE.Vector3( 0, 1.5, 0 );
+
+      var renderer = new THREE.WebGLRenderer();
+      //renderer.setPixelRatio( window.devicePixelRatio );
+      renderer.setSize( 400,400 );
+      renderer.gammaInput = true;
+      renderer.gammaOutput = true;
+      renderer.shadowMap.enabled = true;
+
+      contenedor = document.getElementById('WebGL-output');
+
+      contenedor.appendChild(renderer.domElement);
+
+
+      var loader = new THREE.STLLoader();
+      var scalemesh = 0.09;
+      
+
+      // load a resource
+      loader.load('models/selfie.stl',function ( geometry ) {
+        var material = new THREE.MeshPhongMaterial( { color: '#cccccc', specular: 0x111111, shininess: 100 } );
+          var mesha = new THREE.Mesh( geometry, material );
+          mesha.position.set( 35, -45, 0 );
+          mesha.rotation.set( -Math.PI / 2, 0, 0 );
+          mesha.scale.set( scalemesh, scalemesh, scalemesh );
+          mesha.castShadow = true;
+          mesha.receiveShadow = true;
+          scene.add( mesha );
+        } );
+
+      
+
+      //var plane = new THREE.Mesh(
+         // new THREE.PlaneBufferGeometry( 100, 100 ),
+         // new THREE.MeshPhongMaterial( { color: '#cccccc', specular: '#cccccc' } )
+        //);
+        //plane.rotation.x = -Math.PI/2;
+       // plane.position.y = -4;
+       // scene.add( plane );
+       // plane.receiveShadow = true;
+
+        scene.add( new THREE.HemisphereLight( 0x443333, 0x111122 ) );
+        addShadowedLight( 1, 1, 1, 0xffffff, 1.35 );
+        //addShadowedLight( 0.5, 1, -1, 0xffaa00, 1 );
+
+      
+       // function onWindowResize() {
+        
+       // camera.aspect = window.innerWidth/ window.innerHeight;
+
+        //camera.updateProjectionMatrix();
+       // renderer.setSize( window.innerWidth, window.innerHeight );
+
+     // }
+
+      function addShadowedLight( x, y, z, color, intensity ) {
+        var directionalLight = new THREE.DirectionalLight( color, intensity );
+        directionalLight.position.set( x, y, z );
+        scene.add( directionalLight );
+        directionalLight.castShadow = true;
+        var d = 1;
+        directionalLight.shadow.camera.left = -d;
+        directionalLight.shadow.camera.right = d;
+        directionalLight.shadow.camera.top = d;
+        directionalLight.shadow.camera.bottom = -d;
+        directionalLight.shadow.camera.near = 1;
+        directionalLight.shadow.camera.far = 4;
+        directionalLight.shadow.mapSize.width = 1024;
+        directionalLight.shadow.mapSize.height = 1024;
+        directionalLight.shadow.bias = -0.002;
+      }
+
+      var animate = function () {
+        
+        requestAnimationFrame( animate );
+
+        var timer = Date.now() * 0.0005;
+        camera.position.x = Math.cos( timer ) * 5;
+        camera.position.z = Math.sin( timer ) * 5;
+        camera.lookAt( cameraTarget );
+
+        renderer.render(scene, camera);
+      };
+
+      animate();
+
+
+    </script>
+
+
+       <img src="images/selfie/02.jpg" style="width:100%">
+       <img src="images/selfie/02Selfie.jpg" style="width:100%">
+
+       <p>Capriccio Selfie Palette is an ongoing colaboretive project with <a href="http://www.therealtonyauth.com/">Tony Auth.</a></p> 
+
+       <p>Capriccio Selfie Palette is an improvisational still life making device—an expanded selfie stick with a platform in the foreground. It is a tool to explore scale, and spatial and symbiotic relationships with small objects in a visual field. Capriccio is an Architectural fantasy and poetic potential.</p>
+
+      
+
+
+      <!-- Slideshow container -->
+      <div class="slideshow-container">
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides">
+          <img src="images/selfie/selfie2.png" style="width:100%">
+          <div class="text">Field Study</div>
+        </div>
+
+        <div class="mySlides">
+          <img src="images/selfie/Palette4.jpg" style="width:100%">
+          <div class="text">Field Study</div>
+        </div>
+
+        <div class="mySlides">
+           <img src="images/selfie/Palette5.jpg" style="width:100%">
+          <div class="text">Field Study</div>
+        </div>
+
+         <div class="mySlides">
+           <img src="images/selfie/04.jpg" style="width:100%">
+          <div class="text">Field Study</div>
+        </div>
+
+         <div class="mySlides">
+           <img src="images/selfie/05.jpg" style="width:100%">
+          <div class="text">Field Study</div>
+        </div>
+
+        <div class="mySlides">
+           <img src="images/selfie/06.jpg" style="width:100%">
+          <div class="text">Field Study</div>
+        </div>
+
+        <div class="mySlides">
+           <img src="images/selfie/07.jpg" style="width:100%">
+          <div class="text">Field Study</div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+      </div>
+
+      <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+          </script>
+
+
+
+      
+
+        
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+    </div>
+
+    <div id="footer"></div>
+  </div>
+</body>
+</html>

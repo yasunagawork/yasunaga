@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>yasunaga.work</title>
+  <link rel="stylesheet" href="main2.css">
+  <link rel="icon" href="images/electronics.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+ 
+
+
+
+  <div class="bg">
+    <div id = "container">
+       <div id= "header2">
+        <h4> <a href="index.html">yasunaga.work/portfolio</a></h4>
+       </div>
+
+      <div id="header">
+        <h1> <a href="cloudprinter.html">Cloud Printer(blu)</a></h1>
+      </div>
+
+
+      <div class="videoWrapper">
+           <p>
+            <iframe src="https://player.vimeo.com/video/89096649" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></p></div>
+
+
+      
+
+
+       
+
+       <p>3D printer's smoke break<br>
+        stretching, siging, contemplating, drifting
+        <br>
+        <br>
+        This is a coriographed dance piece performed by Prusa 2 3D printer. 3D printers are under pressures. They are made to carry our technological derams and solutions to our social and econimocal problems. In this performance, 3D printer is free from our burden and performcs their dance routine expressibly.<br>
+        
+
+        Desposible electronic cigerette (blu) is a magic wand of technological fetishes. Obsettion to imortalality and escapist optimism. Printer interfaces this magic wand to produce cool menthole flavered ephemeral vaper, that drifts and dessapear before our eyes like our body and its dreams. Leaving us with songs of mechaninc movement of their body. 
+       </p> 
+       <br>
+
+       <h2> Process</h2>
+
+       <p> I am using <a href="http://marlinfw.org/"> Marlin Firmware</a> that is comonly used in open scourse 3D printer. And <a href="http://www.pronterface.com/"> Printrun </a>software to execute and send g-code to the printer. Extruder motor is used and configured to be a syringe. </p>
+       <p>
+        G-code is a simple comands that common numaciral controll devise (CNC, 3D printer, plotter). It is a simple text file composed to be a reference for the printer to dance to. 
+      </p>
+
+      
+
+
+       <PRE>
+
+
+G21 
+G28 ; orient the body to the world
+G90 ; use absolute coordinates
+
+M82 ; set syringe to absolute mode
+M302 ; Allow cold extrudes
+
+G92 E0
+
+G1 E0 F1000.000
+G4 P3000                    ;dwell
+G1 X100 Y100 E21 F150
+G4 P3000                    ;dwell
+G1 E10 F1500.000
+G1 E0 F800                  ;inhale
+
+
+elongated circle;
+
+G1 X115.6 Y61.74 Z14.46 F500
+G1 X117.27 Y84.22 Z20.35
+G1 X121.7 Y100.6 Z24.6
+G1 X128.58 Y117.8 Z29.1
+G1 X137.12 Y131.6 Z32.7 
+G4 P3000                   ;dwell
+G1 E3                      ;exhale
+G1 X148.15 Y125.4 Z31.14 E5
+G1 X146.4 Y108.8 Z26.8 
+G1 X140.7 Y88.3 Z21.4 E15
+G1 X132.8 Y70 Z16
+G1 X124 Y57 Z13 E21
+
+G4 P3000                  ;dwell
+G1 E10 F1500.000          ;exhale
+G1 E0 F800                ;inhale
+ 
+
+G1 X19 Y34 Z60 E3
+G1 X28 Y41 Z60
+G1 X39 Y41 Z60 E6
+G1 X48 Y35 Z60
+G1 X51 Y25 Z60 E9
+G1 X48 Y14 Z60
+G1 X100 Y100 Z40
+G4 P4000                  ;dwell
+G1 E10                    ;exhale
+G4 P4000                  ;dwell
+G1 E11                    ;exhale
+G4 P5000                  ;dwell
+G1 E12                    ;exhale
+G4 P2000                  ;dwell
+G1 E13                    ;exhale
+G1 X39 Y8 Z60
+G1 X28 Y8 Z60
+G1 X20 Y21 Z60
+G4 P4000                  ;dwell
+G1 X100 
+G4 P3000                  ;dwell
+G1 E10 F1000.000
+G1 E0 F800                ;inhale
+G1 X150 E21 F100
+
+G4 P3000 
+G1 E10 F1000.000          ;exhale
+G1 E0 F800                ;inhale
+
+
+G1 X82 Y17 Z12
+G1 X91 Y17 Z12
+G1 X101 Y19 Z12
+G4 P1000                  ;dwell
+G1 E5                     ;exhale
+G1 X110 Y26 Z12
+G1 X99 Y33 Z12
+G1 E10                    ;exhale
+G1 X85 Y40 Z12
+G1 X74 Y48 Z12
+G1 X71 Y56 Z12
+G1 E12                    ;exhale
+G1 X80 Y63 Z12
+G1 X90 Y62 Z12
+G1 E18                    ;exhale
+G1 X101 Y62 Z12
+G1 X101 Y77 Z12
+G1 X95 Y84 Z12
+G1 E20                    ;exhale
+G1 X88 Y71 12Z
+G1 X77 Y93 Z12
+G1 E21                    ;exhale
+G4 P1000                  ;dwell
+
+G4 P3000                  ;dwell
+G1 E10 F1500.000          ;exhale
+G1 E0 F800                ;inhale
+
+
+G28 Y0  ; home Y axis
+M84     ; sleep
+
+</PRE>
+
+       
+      
+
+
+
+
+
+
+
+
+
+     
+    </div>
+
+    <div id="footer"></div>
+  </div>
+</body>
+</html>
