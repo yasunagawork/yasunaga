@@ -20,39 +20,37 @@
         x.className = "navbar";
       }
     }
-  </script> 
+ 
+
+    function toggleSound() {
+
+      var audioElem1 = document.getElementById('audio1');
+      if (audioElem1.paused)
+       audioElem1.play();
+      else
+        audioElem1.pause();
+    }
 
 
-  <script>
- function toggleSound() {
+    function toggleSound2() {
 
-  var audioElem1 = document.getElementById('audio1');
+     var audioElem2 = document.getElementById('audio2');
+      if (audioElem2.paused)
+        audioElem2.play();
+     else
+      audioElem2.pause();
+    }
+
+
+    function toggleSound3() {
+
+    var audioElem3 = document.getElementById('audio3');
   
-  if (audioElem1.paused)
-    audioElem1.play();
-  else
-    audioElem1.pause();
-}
-
-   function toggleSound2() {
-
-  var audioElem2 = document.getElementById('audio2');
-  
-  if (audioElem2.paused)
-    audioElem2.play();
-  else
-    audioElem2.pause();
-}
-
-   function toggleSound3() {
-
-  var audioElem3 = document.getElementById('audio3');
-  
-  if (audioElem3.paused)
-    audioElem3.play();
-  else
-    audioElem3.pause();
-}
+      if (audioElem3.paused)
+        audioElem3.play();
+      else
+        audioElem3.pause();
+    }
 
   </script>
 
@@ -124,13 +122,13 @@
      
      <br><br>
 
-    <button id="player" type="button" onclick="javascript:toggleSound();"> sharing horn sample 1 </button>
+    <button id="player2" type="button" onclick="javascript:toggleSound2();"> sharing horn sample 1 </button>
       <audio id="audio2" loop>
         <source src="/audio/sharing_horn.mp3" type="audio/mp3">
         <source src="/audio/sharing_horn.wav" type="audio/wav">
     </audio>
 
-    <button id="player" type="button" onclick="javascript:toggleSound();"> sharing horn sample 2 </button> ▼
+    <button id="player3" type="button" onclick="javascript:toggleSound3();"> sharing horn sample 2 </button> ▼
       <audio id="audio3" loop>
         <source src="/audio/sharing_horn2.mp3" type="audio/mp3">
         <source src="/audio/sharing_horn2.wav" type="audio/wav">
