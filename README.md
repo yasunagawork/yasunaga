@@ -1,2 +1,2 @@
-# yasunaga.github.io
+yasunaga.github.io
 My web site
