@@ -27,27 +27,31 @@
  function toggleSound() {
 
   var audioElem1 = document.getElementById('audio1');
-  var audioElem2 = document.getElementById('audio2');
-  var audioElem3 = document.getElementById('audio3');
   
   if (audioElem1.paused)
     audioElem1.play();
   else
     audioElem1.pause();
 
+   function toggleSound2() {
 
+  var audioElem2 = document.getElementById('audio2');
+  
   if (audioElem2.paused)
     audioElem2.play();
   else
     audioElem2.pause();
-   
 
+   function toggleSound3() {
+
+  var audioElem3 = document.getElementById('audio3');
+  
   if (audioElem3.paused)
     audioElem3.play();
   else
     audioElem3.pause();
-  }
-   </script>
+
+  </script>
 
   
 
@@ -77,7 +81,7 @@
        </div>
 
       <div id="header">
-        <h1> <a href="stay.html"> The stay</h1></a>
+        <h1> <a href="stay.html"> The stay</h1></a> 
       </div>
       <br>
 
