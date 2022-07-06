@@ -393,6 +393,19 @@ a:hover {
 	
 }
 
+#credit{
+    font-family: 'Gudea',sans-serif;
+  font-size: 0.8em;
+  color: gray;
+  font-weight: normal;
+  float: 
+  right;
+}
+
+#credit a {
+  color: gray;
+}
+
 .videoWrapper {
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
