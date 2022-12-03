@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>百笙　Centikhene</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="icon" href="images/electronics.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+</head>
+
+
+
+
+<body>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myNavbar");
+      if (x.className === "navbar") {
+        x.className += " responsive";
+      } else {
+        x.className = "navbar";
+      }
+    }
+ 
+
+    function toggleSound() {
+
+      var audioElem1 = document.getElementById('audio1');
+      if (audioElem1.paused)
+       audioElem1.play();
+      else
+        audioElem1.pause();
+    }
+
+  </script>
+
+  
+
+
+
+  <div class="navbar" id="myNavbar">
+    <a href="index.html" class="active">yasunaga.work</a>
+    <a href="index.html#works">works</a>
+   <!--  <a href="index.html#resouces">resources</a> -->
+    <a href="index.html#contacts">contacts</a>
+    <a href="index.html#about">what about</a>
+    <a href="cv.html">CV</a>
+
+    <a href="javascript:void(0);" style="font-size:10px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </div> 
+
+
+
+  
+ 
+    <div id = "container">
+       <div id= "header2">
+        <h4> <a href="index.html">yasunaga.work</a></h4>
+       </div>
+
+
+
+ <!--   <div class = "sticky">
+    <a href="images/centikhene/board.svg" title="centikhene1"><img src="images/centikhene/board.svg" style="width:100%;"> </a>
+  </div>
+ -->
+
+      
+
+
+
+      <div id="header">
+        <h1> <a href="stay.html"> 百笙 Centikhene - electronic mouth organ</h1></a> 
+      </div>
+      <br>
+
+
+    <div class = "content">
+
+
+      <button id="player" type="button" onclick="javascript:toggleSound();"> song for an empty room </button> 
+      <audio id="audio1" loop>
+        <source src="/audio/part.mp3" type="audio/mp3">
+        <source src="/audio/large2.wav" type="audio/wav">
+        </audio><br><br>
+
+
+        <h3>百笙 (hyakusho) - Centikhene is an electronic mouth organ that is modeled after the Laotian traditional mouth organ, Khene, and the Japanese traditional mouth organ, 笙 Sho.</h3>
+
+
+       <a href="images/centikhene/centikhene1.JPG" title="centikhene3"><img src="images/centikhene/centikhene3.JPG" style="width:100%" ></a>
+       <a href="images/centikhene/centikhene2.JPG" title="centikhene4"><img src="images/centikhene/centikhene4.JPG" style="width:100%" ></a>
+       <a href="images/centikhene/play.jpg" title="centikhene4"><img src="images/centikhene/play.jpg" style="width:50%;" ></a>
+       <a href="images/centikhene/pictorial2.svg" title="centikhene4"><img src="images/centikhene/pictorial2.svg" style="width:44%;" ></a>
+
+       <a href="images/centikhene/board2.svg" title="centikhene1"><img src="images/centikhene/board2.svg" style="width:44%; padding-left: 5px;" ></a>
+
+       
+       
+
+        <p>
+           Centikhene’s circuit design is born out of one of the electronic bugs from the project <a href="http://electronicentomology.com"> Electronic Entomology</a>. Centikhene is an attempt to create an electronic folk instrument that is a companion for our daily life. The goal is to have a simple enough design in its interface and architecture. That is the spirit of folk instrument which lends itself to be iterated, modified and be played by many users. 
+        </p>
+
+        <p>
+          The main part of this circuit is a pair of tunable oscillators + trigger units that is repeated over and over on the board to create the available notes. This unit can be multiplied like how the unit of a centipede’s leg repeats over and over, which centikhene’s name originates from. In this current iteration there are 5 repeating units and 10 notes that can be played at the same time, which can be expanded in the future versions. Centikhene’s centi (hundred) also refers to the tunable nature of each note that can produce hundreds of different tunings, which are usually predetermined by the size of reeds and pipes in the case of khene and sho. 
+        </p>
+
+
+        <a href="images/centikhene/units.svg" title="centikhene1"><img src="images/centikhene/units.svg" style="width:100%;" ></a>
+
+
+        <p>
+          Centikhene possesses a breath synchronization instrument (breath sensor) that are developped and adobted from  <a href="http://ijfritz.byethost4.com/Stealth/st_over.htm">Ian Fritz's design of wind sensor</a> to be bidirectional.
+
+           This triggers notes with the movement of the diaphragm both at inhale and exhale, allowing the player to play rhythmically and continuously. This ongoing project started with the help of Will Schorre and has gone through a few iterations of prototyping. The next generation is currently been designed with a consideration of bringing the full potential of this format. There will be performances in the near future.
+        </p>
+
+        <a href="images/centikhene/BSI.svg" title="centikhene1"><img src="images/centikhene/BSI.svg" style="width:100%;" ></a>
+
+
+
+        <a href="http://ijfritz.byethost4.com/Stealth/st_over.htm">Wind sensor idea by Ian Fritz </a>
+
+
+
+
+
+
+
+    
+
+     
+     </div>
+
+    
+
+  
+
+    <div id="footer"></div>
+  </div>
+
+</body>
+</html>

@@ -3,7 +3,7 @@ body{
 	font-weight:200;
 	font-size: 1em;
 	color: #222;
-	background: #cccccc;
+	background: #d8d1a4;
 	margin: 0;
 	height: 100%;
 	line-height: 1.4em;
@@ -18,7 +18,7 @@ body{
   height: 60px;
   width: 250px;
   border-radius: 15px;
-  background-color: #edddc9;
+  background-color: #d8d1a4;
   padding-left:20pX;
   padding-right:20pX;
   text-align: center;
@@ -127,42 +127,12 @@ img {
 
 }
 
-#shake img:hover {
-    /* Start the shake animation and make the animation last for 0.5 seconds */
-    animation: shake  5s; 
-    /* When the animation is finished, start again */
-    animation-iteration-count: infinite; 
+div.sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: -999;
 }
-
-@keyframes shake2 {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
-}
-
-@keyframes shake {
-    0% { transform: translate(0px, 20px) rotate(0deg); }
-    10% { transform: translate(0px, 40px) rotate(0deg); }
-    20% { transform: translate(0px, 60px) rotate(0deg); }
-    30% { transform: translate(0px, 80px) rotate(0deg); }
-    40% { transform: translate(0px, 100px) rotate(0deg); }
-    50% { transform: translate(0px, 120px) rotate(0deg); }
-    60% { transform: translate(0px, 100px) rotate(0deg); }
-    70% { transform: translate(0px, 80px) rotate(0deg); }
-    80% { transform: translate(0px, 60px) rotate(0deg); }
-    90% { transform: translate(0px, 40px) rotate(0deg); }
-    100% { transform: translate(0px, 20px) rotate(0deg); }
-}
-
-
 
 * {box-sizing: border-box;}
 .img-zoom-container {
@@ -216,7 +186,7 @@ img {
 
 .navbar {
   overflow: hidden;
-  background-color: #cccccc;  
+  background-color: #d8d1a4;  
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -235,14 +205,14 @@ img {
 }
 
 .navbar a:hover {
-  background-color: #edddc9;
+  background-color:  #138c01;
   color: #222;
   border-radius: 10px;
   z-index: 9999;
 }
 
 .navbar a.active {
-  background-color:  #edddc9;
+  background-color:  #138c01;
   color: #222;
   border-radius: 10px;
 }
@@ -390,6 +360,7 @@ a:active{
 
 a:hover {
 	text-decoration: none;
+  background-color: pink;
 	
 }
 
