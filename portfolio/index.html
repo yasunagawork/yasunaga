@@ -22,16 +22,20 @@
 	</script> 
 
 
-<!-- 
+
 	<div class="navbar" id="myNavbar">
-		<a href="index.html" class="active">yasunaga.work</a>
-		<a href="#works">works</a>
+		<a href="index.html" class="active">yasunaga.work/samples</a>
+		<a href="#circuit">Circuit Design</a>
 		
-		<a href="#contacts">contacts</a>
-		<a href="#cv">CV/Resme</a>
+		<a href="#digifab">Digital Fabrication</a>
+		<a href="#3d">3D modeling/Game/VR</a>
+		<a href="#programming">Creative Programing</a>
+		<a href="#Other methods">Other Methods</a>
+		<a href="#Other methods">Class</a>
+		<a href="#Other methods">Contact</a>
 
 		<a href="javascript:void(0);" style="font-size:30px;" class="icon" onclick="myFunction()">&#9776;</a>
-	</div>  -->
+	</div>  
 
 
 	
@@ -41,49 +45,315 @@
 		
 
 			<div id="header">
+				<div id="yasunagabox">
+					<h1> <a href="index.html">万屋- general store - work samples</a></h1>
+				</div>
+			</div>
 
-			
-			<h1> <a href="index.html">Lucas Haroldsen</a></h1></div>
+				<p>This page functions as extended CV for my skillset</p>
+
+
+
+				<h2> Profile</h2>
+
+				<img style="width: 150px; display: inline-block; float: right;" src="images/Lucas_Yasunaga.jpg">
+
+				<div id="menu">
+
+					<ul>
+						<li>Name: Lucas Yasunaga</li>
+						<li>Language: Native Japanese, Fluent English</li>
+						<li>Language</li>
+						<li>Language</li>
+
+					</ul>
+					
+					
+				</div>
+
+				<br><br>
+
+				
+
+				
+
+
+				
+
+
+
+					
 				
 			
-			<br><br>
+				
+				<h2 id = "circuit"> Circuit Design</h2>
+
+				
+
+				<div id="menu">
+					<b>Projects</b>
+					<ul>
+						<li><a href="#centikhene">Centikhene - Electronic Mouth Organ</a> </li>
+						<li><a href="#environment">Environment - circuit design for experimental music </a></li>
+						<li><a href="#IR">IR sensetive lights for painting project</a></li>
+						<li><a href="#bugs">Electronic Entomology</a></li>
+					</ul>
+				</div>
+
+
+
+
+
+				<h3 id="centikhene"><mark>百笙 (hyakushō) - Centikhene</mark></h3>
+
 
 
 				
-				<h2 id = "works"> Works</h2>
+				<div id="imagee">
+					<a href="images/centikhene/centikhene3.jpg"> 
+					<img src="images/centikhene/centikhene3.jpg"></a>
+				</div>
+
+				<p> Centikhene is an electronic mouth organ that is modeled after the Laotian traditional mouth organ, Khene, and the Japanese traditional mouth organ, 笙 Shō. This is the most current electronic musical instrument project. Project page --><a href="http://yasunaga.work/centikhene"> here</a>. This project involved folloing skillsets;</p>
 
 				<ul>
-					<li><a href="environment.html">Environment - playground for musical ecosystem</a></li>
-					<li> <a href="electronicentomology.html">Electronic Entomology</a></li>
-					<li><a href="humanAI.html">AI acting cut1</a></li>
-					<li><a href="cloudprinter.html">Cloud Printer(blu)</a></li>
-					<li><a href="ring.html">Cosmic Engagement Ring</a></li>
-					<li><a href="selfie.html">Capricio Selfie Palette</a></li>
-					<li><a href="oogle.html">Oogle</a></li>
-					
+					<li>circuit design and schemetic drawing</li>
+					<li>PCB assembly</li>
+					<li>3D modeling and 3D printing</li>
+					<li>mechanical design</li>
+					<li>woodworking</li>
+				</ul>
+
+				Interms of circuit design, below are the breakdown of the design componetns in this project.</p>
+
+				<ul>
+					<li>Opamp ciruits</li>
+					<li>CMOS logic gates</li>
+					<li>voltage regulator circuits</li>
+					<li>pre-amplifier circuit</li>
+					<li>speaker amplifier circuit</li>
 
 				</ul>
-				<br>
+
+				<p>Project has gone through few iterations of prortotying, iterating through design, layouts, materials, and archtecture. Image below from left, 
+				1) handcarved copper board 2) cnc machine milled copper board on hand crafted case 3) Printed circuit board manufactured</p>
 
 
-				<!-- <h2 id = "resources"> resources</h2>
+				<div id="imagee">
+					<a href="images/centikhene/prototypes.jpg"> 
+					<img src="images/centikhene/prototypes.jpg"></a>
+				</div>
+
+				<p> Project is designed in a circuit design software <a href="https://osmondpcb.com/"> Osmond </a> and <a href="https://www.kicad.org/"> KiCad</a>. Prototypes are tested through <b>breadboard >> handsoldered boards >> manufactured PCB</b>. Images below are PCB manufactured.</p>
+
+				Version 1 of manufactured PCB 
+
+				<div id="imagee">
+					<a href="images/centikhene/pcb_scan_oldproto.jpg"> 
+					<img src="images/centikhene/pcb_scan_oldproto.jpg"></a>
+				</div>
+
+				Version 2 of manufactured PCB 
+
+				<div id="imagee">
+					<a href="images/centikhene/pcb_scan_1.jpg"> 
+					<img src="images/centikhene/pcb_scan_1.jpg"></a>
+				</div>
+
+				<div id="imagee">
+					<a href="images/centikhene/pcb_scan_2.jpg"> 
+					<img src="images/centikhene/pcb_scan_2.jpg"></a>
+				</div>
+
+				<p>I have adopted the simple wind sensor that are developed by <a href="http://ijfritz.byethost4.com/Stealth/st_over.htm"> Ian Fritz</a> and iterated to be bidirectional. LED light shines onto LDR, this triggers notes with the movement of the diaphragm both at inhale and exhale, allowing the player to play rhythmically and continuously. 3D model of wind sensor <a href="#mouth_piece">Here.</a> Voltage from the wind sensor is scaled and shifted by op-amp and then gates the oscilators, alowing them to make sound when we breath in or out. 
+
+				</p> 
 
 
-				<ul>
-					<li> <a href="bubble.html">bubble wraps and inflatables</a></li>
-					<li> <a href="bubble.html">EMS</a></li>
+
+				
 
 
-				</ul> -->
+			 	  <div class="videoWrapper">
 
-				<h2>Robotic Art Introduction Class</h2>
+			        <iframe src="https://www.youtube.com/embed/VPO4m85yZoU?rel=0&amp;controls=1&amp;showinfo=0&amp;modestbranding=1"></iframe>
+			        
 
-				<ul>
-					<li> <a href="http://yasunaga.work/raif17/index.html">Robotic Arts Intro Fall 2017</a></li>
-					<li> <a href="http://yasunaga.work/raif18/index.html">Robotic Arts Intro Fall 2018</a></li>
-					<li> <a href="http://yasunaga.work/raif19/index.html">Robotic Arts Intro Fall 2019</a></li>
-					
-				</ul>
+			           </div>
+
+
+
+				<h3 id="environment"><mark>Environment - circuit design for experimental music </mark></h3>
+
+				<div id="imagee">
+					<a href="images/environment/filmstill1.jpg"> 
+					<img src="images/environment/filmstill1.jpg"></a>
+				</div>
+				<div id="imagee">
+					<a href="images/environment/performance1.jpg"> 
+					<img src="images/environment/performance1.jpg"></a>
+				</div>
+
+
+
+
+
+
+
+
+
+
+				<h3 id="IR"> <mark>IR sensetive lights for painting project</mark></h3>
+
+
+
+				<div class="videoWrapper">
+
+			        <iframe src="https://www.youtube.com/embed/ukwp7DZRqQY?rel=0&amp;controls=1&amp;showinfo=0&amp;modestbranding=1"></iframe>
+			    </div>
+
+			    <p>
+
+			    This project was contracted by <a href="https://www.yeqinzhu.info/painting"> Ye Qin Zhu</a> for grant project for Yale School of Medicine. I have worked on a circuit design and constructed the board that houses transistror circuit for each hight power LED lights, a microcontroleler, and a infrared sensor. I have programmed the microcontroller for the light fading sequence that is cordinated with the presence of a person.
+			    </p>
+
+			    <p>April 2022</p>
+
+
+
+			    <h3 id="bugs"> <mark>Electronic Entomology</mark></h3>
+
+			    
+
+			    This project explores analogue circuitry in miniture scale. 
+
+
+			   
+
+
+
+
+
+				
+				<hr>
+
+
+				<h2 id = "digifab">Digital Fabrication</h2>
+
+				<div id="menu">
+					<b>Projects</b>
+					<ul>
+						<li><a href="#mouth_piece">Centikhene - breath sensor</a> </li>
+						<li><a href="#engagement">Cosmic Engagement Ring - 3D print</a></li>
+						<li><a href="#voice">Acoustic Filfer - 3D print</a></li>
+						<li><a href="#jimmi">jimmi reserch - 3D printer build workshop</a></li>
+						<li><a href="#cnc">cnc</a>Working with CNC</li>
+						<li><a href="#cloud">cloud printer - hacked 3D printer</a></li>
+						<li><a href="#wedding">Wedding Gift - cnc milled mold making</a></li>
+						<li><a href="#receptacle">receptacle - milling a mold for vacuform</a></li>
+					</ul>
+				</div>
+
+				<h3 id="mouth_piece"><mark>Centikhene - breath sensor</mark></h3>
+
+
+				<div id="imagee">
+					<a href="images/centikhene/mouth.jpg"> 
+					<img src="images/centikhene/mouth.jpg"></a>
+				</div>
+
+				
+					<a href="images/centikhene/BSI.svg"> 
+					<img src="images/centikhene/BSI.svg" style="width: 600px"></a> <br>
+				
+
+
+				<p>Here is the breath sensor of Centikhene project. This 3D model was developped and 3D printed. Two piece will clamp the thin rubber sheeting in the middle which will move to the breath preventing lgiht from reaching to LDR.</p>
+
+				<h3 id="engagement"><mark>Cosmic Engagement Ring - 3D print</mark></h3>
+
+				<h3 id="voice"><mark>Acoustic Filfer - 3D print</mark></h3>
+
+				<h3 id="jimmi"><mark>jimmi reserch - 3D printer build </mark></h3>
+
+				<h3 id="cloud"><mark>cloud printer - hacked 3D printer</mark></h3>
+
+				<h3 id="wedding"><mark>Wedding Gift - cnc milled mold making</mark></h3>
+
+				<h3 id="receptacle"><mark>receptacle - milling a mold for vacuform</mark></h3>
+
+
+
+
+
+
+
+				<hr>
+
+
+				<h2 id = "3d"> 3D modeling / Game / VR</h2>
+
+				<div id="menu">
+					<b>Projects</b>
+					<ul>
+						<li><a href="#asterion">House of Asterion - VR project</a> </li>
+						<li><a href="#updraft">Updraft Tower</a></li>
+						<li><a href="#everything">everything.exe - Unity game</a></li>
+						<li><a href="#voice2">Centikhene model</a></li>
+						<li><a href="#selfie">Capricio Selfie Stick</a></li>
+						<li><a href="#unity">Unity space</a></li>
+
+
+
+					</ul>
+				</div>
+
+				<hr>
+
+				<h2 id = "other"> Creative Programming</h2>
+
+				<div id="menu">
+					<b>Projects</b>
+					<ul>
+						<li><a href="#mouth_piece">openSCAD</a> </li>
+						<li><a href="#engagement">CNC controll software</a></li>
+						<li><a href="#voice">oogle - google seaching text to speech music</a></li>
+						<li><a href="#jimmi">Computer Music - pet - maxMSP</a></li>
+						<li><a href="#cnc">AVR</a></li>
+
+					</ul>
+				</div>
+
+				<hr>
+
+				<h2 id = "other"> Other Fabrication Methods</h2>
+
+				<div id="menu">
+					<b>Projects</b>
+					<ul>
+						<li><a href="#mouth_piece">Woodworking</a> </li>
+						<li><a href="#engagement">Metal Fabrication and Casting</a></li>
+						<li><a href="#voice">Clay</a></li>
+						<li><a href="#jimmi">inflatables</a></li>
+						<li><a href="#cnc">nicolodian selfie stick</a></li>
+
+					</ul>
+				</div>
+
+				<hr>
+
+
+
+				<h2 id = "class"> Class</h2>
+
+				<div id="menu">
+					<b>Projects</b>
+					<ul>
+						<li> <a href="http://yasunaga.work/raif17/index.html">Robotic Arts Intro Fall 2017</a></li>
+						<li> <a href="http://yasunaga.work/raif18/index.html">Robotic Arts Intro Fall 2018</a></li>
+						<li> <a href="http://yasunaga.work/raif19/index.html">Robotic Arts Intro Fall 2019</a></li>
+					</ul>
+				</div>
 
 				<br>
 				<br>
@@ -92,40 +362,36 @@
 
 				<h2 id = "contacts">Contact</h2>
 
-				<p>Lucas Yasunaga Haroldsen</p>
+				<p>Lucas Yasunaga</p>
 				
 
 				<p>
 					Please contact me at; <br>
 					
-					lucas.haroldsen@gmail.com
+					yasunaga dot work @ gmail.com
 
 			    </p>
 			    <br>
 			    <br>
 
+			    	<a href="http://yasunaga.work/index.html"> Art works </a>
 
 
 
 
-			    <h2 id = "cv">CV/Resme</h2>
-
-			    	<p><a href="images/CV.pdf">cv</a>
 			    	
 
 			</div>
 
 
 
-   
-    <br>
-    <br>
-    <br>
 
-  
+
+   
 		
 		
 		<div id="footer">
+
 
 
 		</div>
@@ -134,3 +400,4 @@
      
 </body>
 </html>
+
