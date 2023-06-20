@@ -11,16 +11,7 @@
 
 <body>
 
-  <script>
-    function myFunction() {
-      var x = document.getElementById("myNavbar");
-      if (x.className === "navbar") {
-        x.className += " responsive";
-      } else {
-        x.className = "navbar";
-      }
-    }
-  </script> 
+  <script src="js/common/nav.js"></script>  
 
 
   <div class="navbar" id="myNavbar">
@@ -116,17 +107,9 @@
 
      <a href="images/environment/filmstill_3.jpg" title="click here to see the full sized image"><img src="images/environment/filmstill_3.jpg" style="width:100%" ></a>
 
+     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
-
-
-
-</p>
-
-     
-
-    
-
-  
+    <script src="js/common/go_top.js"></script>
 
     <div id="footer"></div>
   </div>
